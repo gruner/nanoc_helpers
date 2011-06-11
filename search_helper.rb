@@ -72,9 +72,8 @@ module SearchHelper
         puts "Indexed: #{term}"
       end
       index["items"][id] = {
-        "url" => "#{item.identifier}",
-        "title" => item[:title],
-        "crumb" => item[:crumb]
+        "url" => "#{permalink(item)}",
+        "title" => item[:title]
       }
       id += 1
     end
